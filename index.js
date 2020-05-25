@@ -74,4 +74,4 @@ app.delete('/listings/:id', async (req, res) => {
   res.json({ status: 'success' });
 });
 
-app.listen(8888, () => console.log('Example app listening on port 8888!'));
+app.listen(process.env.PORT, () => console.log('Rent app listening on port '+process.env.PORT+'!'));

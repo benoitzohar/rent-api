@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --ignore './db/' index.js",
+    "dev": "PORT=8888 nodemon --ignore './db/' index.js",
     "start": "nodemon --ignore './db/' index.js"
   },
   "author": "",
