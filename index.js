@@ -74,4 +74,12 @@ app.delete('/listings/:id', async (req, res) => {
   res.json({ status: 'success' });
 });
 
+app.get('/scrape', async (req, res) => {
+  const scrapeListings = require('./lib/scrapeListings');
+  const scrapeFacebookListings = require('./lib/scrapeFacebook');
+  await scrapeListings();
+  await scrapeFacebookListings();
+  res.json({ status: 'success' });
+})
+
 app.listen(process.env.PORT, () => console.log('Rent app listening on port '+process.env.PORT+'!'));
